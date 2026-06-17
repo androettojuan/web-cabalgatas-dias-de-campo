@@ -1,3 +1,5 @@
+import { asset } from "../utils/asset.js";
+
 const Experience = () => {
   return (
     <section className="bg-cream py-20 sm:py-28">
@@ -6,7 +8,7 @@ const Experience = () => {
         <div className="relative">
           <div className="absolute -left-4 -top-4 h-full w-full rounded-3xl border border-brown/30" />
           <img
-            src="/img/foto2.jpg"
+            src={asset("/img/foto2.jpg")}
             alt="Experiencia a caballo en las sierras"
             className="relative aspect-[5/4] w-full rounded-3xl object-cover shadow-card"
           />

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { formatPrice } from "../data/catalog.js";
+import { asset } from "../utils/asset.js";
 
 // Tarjeta de experiencia con imagen, título sobre degradado y zoom al hover.
 const AdventureCard = ({ adventure }) => {
@@ -10,7 +11,7 @@ const AdventureCard = ({ adventure }) => {
       className="group relative block aspect-[4/5] overflow-hidden rounded-2xl shadow-soft transition-shadow duration-300 hover:shadow-card"
     >
       <img
-        src={adventure.image}
+        src={asset(adventure.image)}
         alt={adventure.title}
         loading="lazy"
         className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"

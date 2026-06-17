@@ -6,6 +6,7 @@ import {
   FaGoogle,
 } from "react-icons/fa";
 import { socials } from "../data/site.js";
+import { asset } from "../utils/asset.js";
 
 const socialLinks = [
   { icon: FaFacebookF, url: socials.facebook, label: "Facebook" },
@@ -22,7 +23,7 @@ const Footer = () => {
         <p className="eyebrow text-sand">Viví la aventura</p>
 
         <img
-          src="/img/logo-blanco.png"
+          src={asset("/img/logo-blanco.png")}
           alt="Cabalgatas y Días de Campo"
           className="h-28 w-auto object-contain sm:h-32"
         />

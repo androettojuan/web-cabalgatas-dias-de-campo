@@ -1,12 +1,13 @@
 import { FaWhatsapp } from "react-icons/fa";
 import Button from "../components/Button.jsx";
 import { socials } from "../data/site.js";
+import { asset } from "../utils/asset.js";
 
 const ContactCta = () => {
   return (
     <section className="relative overflow-hidden py-24 sm:py-32">
       <img
-        src="/img/foto7.jpg"
+        src={asset("/img/foto7.jpg")}
         alt="Cabalgata al atardecer"
         className="absolute inset-0 h-full w-full object-cover"
       />

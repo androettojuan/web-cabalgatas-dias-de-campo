@@ -1,12 +1,13 @@
 import { FaQuoteLeft } from "react-icons/fa";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { testimonials } from "../data/site.js";
+import { asset } from "../utils/asset.js";
 
 const Testimonials = () => {
   return (
     <section id="testimonios" className="relative overflow-hidden py-20 sm:py-28">
       <img
-        src="/img/foto8.jpg"
+        src={asset("/img/foto8.jpg")}
         alt="Sierras de Córdoba"
         className="absolute inset-0 h-full w-full object-cover"
       />
@@ -38,7 +39,7 @@ const Testimonials = () => {
               <div className="mt-8 flex items-center justify-between border-t border-ivory/15 pt-5">
                 <div className="flex items-center gap-3">
                   <img
-                    src={item.icon}
+                    src={asset(item.icon)}
                     alt={item.platform}
                     className="h-9 w-9 rounded-full object-cover"
                   />

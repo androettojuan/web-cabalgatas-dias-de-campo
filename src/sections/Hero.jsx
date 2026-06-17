@@ -3,6 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { HiArrowDown } from "react-icons/hi2";
 import Button from "../components/Button.jsx";
 import { socials } from "../data/site.js";
+import { asset } from "../utils/asset.js";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const Hero = () => {
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
       {/* Fondo */}
       <img
-        src="/img/portada.jpg"
+        src={asset("/img/portada.jpg")}
         alt="Cabalgata por las sierras de Córdoba"
         className="absolute inset-0 h-full w-full object-cover"
       />

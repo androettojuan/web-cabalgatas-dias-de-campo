@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { HiBars3, HiXMark } from "react-icons/hi2";
+import { asset } from "../utils/asset.js";
 
 const Navbar = ({ overlay = false }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -45,7 +46,7 @@ const Navbar = ({ overlay = false }) => {
           className="flex items-center"
         >
           <img
-            src={solid ? "/img/logo.png" : "/img/logo-blanco.png"}
+            src={asset(solid ? "/img/logo.png" : "/img/logo-blanco.png")}
             alt="Cabalgatas y Días de Campo"
             className="h-12 w-auto object-contain transition-all duration-300"
           />

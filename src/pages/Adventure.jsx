@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import Button from "../components/Button.jsx";
 import { getAdventure, formatPrice } from "../data/catalog.js";
+import { asset } from "../utils/asset.js";
 
 const iconMap = {
   time: BiTimeFive,
@@ -76,7 +77,7 @@ const Adventure = () => {
             {adventure.gallery.map((src, i) => (
               <img
                 key={i}
-                src={src}
+                src={asset(src)}
                 alt={`${adventure.title} ${i + 1}`}
                 className="aspect-square w-full rounded-3xl object-cover shadow-card"
               />
