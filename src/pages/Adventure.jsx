@@ -72,7 +72,7 @@ const Adventure = () => {
           </header>
 
           {/* Galería */}
-          <div className="mt-12 grid gap-5 sm:grid-cols-2">
+          <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2">
             {adventure.gallery.map((src, i) => (
               <img
                 key={i}

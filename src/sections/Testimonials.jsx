@@ -24,7 +24,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
           {testimonials.map((item) => (
             <a
               key={item.platform}

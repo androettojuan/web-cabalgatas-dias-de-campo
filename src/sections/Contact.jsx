@@ -33,20 +33,22 @@ const Contact = () => {
           </h2>
         </div>
 
-        <div className="mt-14 grid items-stretch gap-8 lg:grid-cols-2">
+        <div className="mt-14 grid grid-cols-1 items-stretch gap-8 lg:grid-cols-2">
           {/* Datos de contacto */}
           <div className="flex flex-col justify-center gap-6 rounded-3xl bg-bark p-8 text-ivory shadow-card sm:p-10">
             {items.map(({ icon: Icon, label, value, href }) => {
               const content = (
-                <div className="flex items-center gap-5">
-                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-ivory/10 text-2xl text-sand">
+                <div className="flex items-center gap-4 sm:gap-5">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-ivory/10 text-xl text-sand sm:h-14 sm:w-14 sm:text-2xl">
                     <Icon />
                   </span>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-xs uppercase tracking-widest text-ivory/50">
                       {label}
                     </p>
-                    <p className="text-lg font-medium">{value}</p>
+                    <p className="break-words text-base font-medium sm:text-lg">
+                      {value}
+                    </p>
                   </div>
                 </div>
               );

@@ -34,6 +34,8 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Evita scroll horizontal accidental en pantallas chicas. */
+    overflow-x: hidden;
   }
 
   h1,

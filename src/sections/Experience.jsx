@@ -1,7 +1,7 @@
 const Experience = () => {
   return (
     <section className="bg-cream py-20 sm:py-28">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2 lg:gap-20">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-2 lg:gap-20">
         {/* Imagen con marco decorativo */}
         <div className="relative">
           <div className="absolute -left-4 -top-4 h-full w-full rounded-3xl border border-brown/30" />
