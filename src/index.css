@@ -1,18 +1,64 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  width: 100%;
+@import "tailwindcss";
+
+/* ----------------------------------------------------------------------------
+   Sistema de diseño — paleta tierra heredada del sitio original, modernizada.
+---------------------------------------------------------------------------- */
+@theme {
+  --color-sand: #c2aa8c;
+  --color-sand-soft: #d1c1a9;
+  --color-brown: #865333;
+  --color-bark: #623e2a;
+  --color-cream: #e2d3ba;
+  --color-ivory: #efebe5;
+  --color-ink: #2f2a25;
+  --color-muted: #7d7367;
+
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+
+  --shadow-soft: 0 10px 30px -12px rgba(48, 33, 20, 0.25);
+  --shadow-card: 0 24px 60px -28px rgba(48, 33, 20, 0.45);
+
+  --radius-xl: 1.5rem;
 }
 
-html {
-  scroll-behavior: smooth;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-ivory);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@layer components {
+  /* Eyebrow / kicker: el pequeño texto en mayúsculas sobre los títulos. */
+  .eyebrow {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+    font-weight: 600;
+    font-size: 0.75rem;
+  }
+}
+
+/* Oculta la scrollbar en carruseles horizontales manteniendo el scroll. */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
